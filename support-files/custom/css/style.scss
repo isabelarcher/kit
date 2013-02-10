@@ -1,0 +1,233 @@
+@import 'grid.scss';
+
+//////////
+// GRID //
+//////////
+
+// Specify the number of columns and set column and gutter widths
+$columns: 12;
+$column-width: 60;
+$gutter-width: 0;
+
+// Remove the definition below for a pixel-based layout
+$total-width: 100%;
+
+////////////
+// VARIABLES //
+////////////
+
+//colors and text
+$primary-bg-color:#fff;
+$primary-font-color:#444;
+$primary-link-color:blue;
+$primary-font-family:Verdana, sans-serif;
+
+$secondary-bg-color: blue;
+$secondary-font-color: #fff;
+$secondary-link-color:#fff;
+$secondary-font-family:Georgia, serif;
+
+$tertiary-bg-color:orange;
+$tertiary-font-color: #f9f9f7;
+$tertiary-link-color: #f9f9f7;
+$tertiary-font-family:Georgia, serif;
+
+////////////
+// CLASSES and MIXINS TO REUSE //
+////////////
+
+//color sets
+.primary-color-set {
+	background-color:$primary-bg-color;
+	color:$primary-font-color;
+	font-family: $primary-font-family;
+	
+	a {
+		color:$primary-link-color;
+	}
+}
+
+.secondary-color-set {
+	background-color:$secondary-bg-color;
+	color:$secondary-font-color;
+	font-family:$secondary-font-family;
+	a {
+		color:$secondary-link-color;
+	}
+}
+
+.tertiary-color-set {
+	background-color:$tertiary-bg-color;
+	color:$tertiary-font-color;
+	font-family:$tertiary-font-family;
+	a {
+		color:$tertiary-link-color;
+	}
+}
+//end color sets
+
+//inline navigation, place in the ul
+
+@mixin nav-inline($padding:0 1em 0 0, $margin: 0, $display: inline-block) {
+    margin: 0;
+    li {
+        display: $display;
+        padding: $padding;
+        margin: $margin;
+    }
+}
+
+@mixin nav-inline-item-separator($type) {
+    @include nav-inline($padding: 0 .1em 0 0);
+    li {
+        //only add the separator if it is not the last child
+        &:not(:last-child):after { //& is a parent selector for pseudo classes
+            content: $type;
+        }
+    }
+}
+
+//float-sets for styling that doesn't work well with grid: use mixin on container and floated pieces
+@mixin container-float-set($width:100%) {
+	overflow:hidden;
+	clear:both;
+	width:$width;
+}
+
+@mixin floated($position:left, $width:20em, $pad:1em, $margin:1em) {
+	float:$position;
+	width:$width;
+	padding:$pad;
+	margin:$margin;
+}
+//end float-sets
+
+//UL classes
+
+.list-no-bullet {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+//end UL classes
+
+.feature {
+	background-color:$primary-bg-color;
+	border:solid 2px #ccc;
+	border-radius:2px;
+	padding:1em;
+}
+
+.inline {
+	display:inline;
+}
+
+.block {
+	display:block;
+}
+
+.default-padding {
+	padding:1em;
+}
+//hide classes
+.hide {
+    left: -9999px;
+    position: absolute;
+}
+.hide-span {
+	span {
+		@extend .hide;
+	}
+}
+//end hide classes
+
+
+
+
+////////////
+// LAYOUT //
+////////////
+
+body {
+	@extend .primary-color-set;
+}
+header#banner {
+	margin-bottom:1em;
+	@extend .default-padding;
+	@extend .secondary-color-set;
+	@include column(12);
+}
+nav {
+	div.formatting {
+		@extend .tertiary-color-set;
+		padding:.5em;
+	}
+}
+div#main-container {
+		padding:.5em;
+}
+aside {
+	div.formatting {
+		@extend .feature;
+		margin:1em 0 0 1em;
+	}
+}
+footer {
+	text-align:center;
+	@extend .secondary-color-set;
+	@include column(12);
+}
+body#vertical-nav {
+	nav {
+		@include column(2);
+	}
+	div#main-container {
+		@include column(8);
+	}
+	aside {
+		@include column(2);
+	}
+}
+body#horizontal-nav {
+	nav {
+		@include nav-inline;		
+	}
+	div#main-container {
+		@include column(10);
+	}
+	aside {
+		@include column(2);
+	}
+}
+
+section#first-section {
+	@include column(12);
+	article {
+		@include column(6);
+		div.formatting {
+			@extend .feature;
+			margin: 1em;
+		}
+	}
+}
+@media screen and (max-width: 720px) {
+	.block {
+		display:block;
+	}
+	body#vertical-nav, body#horizontal-nav {	
+		nav {
+			@include column(12);
+			li {
+				@extend .block;
+			}
+		}
+		div#main-container {
+			@include column(12);
+		}
+		aside {
+			@include column(12);
+		}
+	}
+}
+
+
