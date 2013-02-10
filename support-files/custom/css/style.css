@@ -1,12 +1,112 @@
-body {
-  width: 100%;
-  *zoom: 1; }
-  body:before, body:after {
-    content: "";
-    display: table; }
-  body:after {
-    clear: both; }
+/* GRID FROM RESPONSIVE GRID SYSTEM http://www.responsivegridsystem.com/ */
+/*  SECTIONS  ============================================================================= */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px; }
 
+/*  GROUPING  ============================================================================= */
+.group:before,
+.group:after {
+  content: "";
+  display: table; }
+
+.group:after {
+  clear: both; }
+
+.group {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */ }
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+.col, section#first-section article {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%; }
+
+.col:first-child, section#first-section article:first-child {
+  margin-left: 0; }
+
+/* all browsers except IE6 and lower */
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col, section#first-section article {
+    margin: 1% 0 1% 0%; } }
+/*  GRID OF TWELVE   ============================================================================= */
+.span_12_of_12 {
+  width: 100%; }
+
+.span_11_of_12 {
+  width: 91.46%; }
+
+.span_10_of_12 {
+  width: 83%; }
+
+.span_9_of_12 {
+  width: 74.54%; }
+
+.span_8_of_12 {
+  width: 66.08%; }
+
+.span_7_of_12 {
+  width: 57.62%; }
+
+.span_6_of_12, section#first-section article {
+  width: 49.16%; }
+
+.span_5_of_12 {
+  width: 40.7%; }
+
+.span_4_of_12 {
+  width: 32.24%; }
+
+.span_3_of_12 {
+  width: 23.78%; }
+
+.span_2_of_12 {
+  width: 15.32%; }
+
+.span_1_of_12 {
+  width: 6.86%; }
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .span_12_of_12 {
+    width: 100%; }
+
+  .span_11_of_12 {
+    width: 100%; }
+
+  .span_10_of_12 {
+    width: 100%; }
+
+  .span_9_of_12 {
+    width: 100%; }
+
+  .span_8_of_12 {
+    width: 100%; }
+
+  .span_7_of_12 {
+    width: 100%; }
+
+  .span_6_of_12, section#first-section article {
+    width: 100%; }
+
+  .span_5_of_12 {
+    width: 100%; }
+
+  .span_4_of_12 {
+    width: 100%; }
+
+  .span_3_of_12 {
+    width: 100%; }
+
+  .span_2_of_12 {
+    width: 100%; }
+
+  .span_1_of_12 {
+    width: 100%; } }
+/* END GRID FROM RESPONSIVE GRID SYSTEM  */
 .primary-color-set, body {
   background-color: white;
   color: #444444;
@@ -53,90 +153,21 @@ body {
   position: absolute; }
 
 header#banner {
-  margin-bottom: 1em;
-  display: inline;
-  float: left;
-  width: 100%;
-  margin: 0 0%; }
+  margin-bottom: 1em; }
 
 nav div.formatting {
   padding: .5em; }
 
 div#main-container {
+  width: 80%;
+  margin: 0 auto;
   padding: .5em; }
 
 aside div.formatting {
   margin: 1em 0 0 1em; }
 
 footer {
-  text-align: center;
-  display: inline;
-  float: left;
-  width: 100%;
-  margin: 0 0%; }
+  text-align: center; }
 
-body#vertical-nav nav {
-  display: inline;
-  float: left;
-  width: 16.66667%;
-  margin: 0 0%; }
-body#vertical-nav div#main-container {
-  display: inline;
-  float: left;
-  width: 66.66667%;
-  margin: 0 0%; }
-body#vertical-nav aside {
-  display: inline;
-  float: left;
-  width: 16.66667%;
-  margin: 0 0%; }
-
-body#horizontal-nav nav {
-  margin: 0; }
-  body#horizontal-nav nav li {
-    display: inline-block;
-    padding: 0 1em 0 0;
-    margin: 0; }
-body#horizontal-nav div#main-container {
-  display: inline;
-  float: left;
-  width: 83.33333%;
-  margin: 0 0%; }
-body#horizontal-nav aside {
-  display: inline;
-  float: left;
-  width: 16.66667%;
-  margin: 0 0%; }
-
-section#first-section {
-  display: inline;
-  float: left;
-  width: 100%;
-  margin: 0 0%; }
-  section#first-section article {
-    display: inline;
-    float: left;
-    width: 50%;
-    margin: 0 0%; }
-    section#first-section article div.formatting {
-      margin: 1em; }
-
-@media screen and (max-width: 720px) {
-  .block, body#vertical-nav nav li, body#horizontal-nav nav li {
-    display: block; }
-
-  body#vertical-nav nav, body#horizontal-nav nav {
-    display: inline;
-    float: left;
-    width: 100%;
-    margin: 0 0%; }
-  body#vertical-nav div#main-container, body#horizontal-nav div#main-container {
-    display: inline;
-    float: left;
-    width: 100%;
-    margin: 0 0%; }
-  body#vertical-nav aside, body#horizontal-nav aside {
-    display: inline;
-    float: left;
-    width: 100%;
-    margin: 0 0%; } }
+section#first-section article div.formatting {
+  margin: 1em; }
