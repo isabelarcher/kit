@@ -25,9 +25,9 @@ $tertiary-font-family:Georgia, serif;
 /*  SECTIONS  ============================================================================= */
 
 .section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
+    clear: both;
+    padding: 0px;
+    margin: 0px;
 }
 
 /*  GROUPING  ============================================================================= */
@@ -48,112 +48,112 @@ $tertiary-font-family:Georgia, serif;
 /*  GRID COLUMN SETUP   ==================================================================== */
 
 .col {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 1.6%;
+    display: block;
+    float:left;
+    margin: 1% 0 1% 1.6%;
 }
 
-.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+/* do this inline below jcm .col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
 
 
 /*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
 
 @media only screen and (max-width: 480px) {
-	.col { 
-		margin: 1% 0 1% 0%;
-	}
+    .col { 
+        margin: 1% 0 1% 0%;
+    }
 }
 //12cols.css
 /*  GRID OF TWELVE   ============================================================================= */
 
 .span_12_of_12 {
-	width: 100%;
+    width: 100%;
 }
 
 .span_11_of_12 {
-	width: 91.46%;
+    width: 91.46%;
 }
 
 .span_10_of_12 {
-	width: 83%;
+    width: 83%;
 }
 
 .span_9_of_12 {
-	width: 74.54%;
+    width: 74.54%;
 }
 
 .span_8_of_12 {
-	width: 66.08%;
+    width: 66.08%;
 }
 
 .span_7_of_12 {
-	width: 57.62%; 
+    width: 57.62%; 
 }
 
 .span_6_of_12 {
-	width: 49.16%; 
+    width: 49.16%; 
 }
 
 .span_5_of_12 {
-	width: 40.7%; 
+    width: 40.7%; 
 }
 
 .span_4_of_12 {
-	width: 32.24%; 
+    width: 32.24%; 
 }
 
 .span_3_of_12 {
-	width: 23.78%;
+    width: 23.78%;
 }
 
 .span_2_of_12 {
-	width: 15.32%; 
+    width: 15.32%; 
 }
 
 .span_1_of_12 {
-	width: 6.86%; 
+    width: 6.86%; 
 }
 
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
 @media only screen and (max-width: 480px) {
-	.span_12_of_12 {
-		width: 100%; 
-	}
-	.span_11_of_12 {
-		width: 100%; 
-	}
-	.span_10_of_12 {
-		width: 100%; 
-	}
-	.span_9_of_12 {
-		width: 100%; 
-	}
-	.span_8_of_12 {
-		width: 100%; 
-	}
-	.span_7_of_12 {
-		width: 100%; 
-	}
-	.span_6_of_12 {
-		width: 100%; 
-	}
-	.span_5_of_12 {
-		width: 100%; 
-	}
-	.span_4_of_12 {
-		width: 100%; 
-	}
-	.span_3_of_12 {
-		width: 100%; 
-	}
-	.span_2_of_12 {
-		width: 100%; 
-	}
-	.span_1_of_12 {
-		width: 100%; 
-	}
+    .span_12_of_12 {
+        width: 100%; 
+    }
+    .span_11_of_12 {
+        width: 100%; 
+    }
+    .span_10_of_12 {
+        width: 100%; 
+    }
+    .span_9_of_12 {
+        width: 100%; 
+    }
+    .span_8_of_12 {
+        width: 100%; 
+    }
+    .span_7_of_12 {
+        width: 100%; 
+    }
+    .span_6_of_12 {
+        width: 100%; 
+    }
+    .span_5_of_12 {
+        width: 100%; 
+    }
+    .span_4_of_12 {
+        width: 100%; 
+    }
+    .span_3_of_12 {
+        width: 100%; 
+    }
+    .span_2_of_12 {
+        width: 100%; 
+    }
+    .span_1_of_12 {
+        width: 100%; 
+    }
 }
 /* END GRID FROM RESPONSIVE GRID SYSTEM  */
 
@@ -165,31 +165,31 @@ $tertiary-font-family:Georgia, serif;
 
 //color sets
 .primary-color-set {
-	background-color:$primary-bg-color;
-	color:$primary-font-color;
-	font-family: $primary-font-family;
-	
-	a {
-		color:$primary-link-color;
-	}
+    background-color:$primary-bg-color;
+    color:$primary-font-color;
+    font-family: $primary-font-family;
+    
+    a {
+        color:$primary-link-color;
+    }
 }
 
 .secondary-color-set {
-	background-color:$secondary-bg-color;
-	color:$secondary-font-color;
-	font-family:$secondary-font-family;
-	a {
-		color:$secondary-link-color;
-	}
+    background-color:$secondary-bg-color;
+    color:$secondary-font-color;
+    font-family:$secondary-font-family;
+    a {
+        color:$secondary-link-color;
+    }
 }
 
 .tertiary-color-set {
-	background-color:$tertiary-bg-color;
-	color:$tertiary-font-color;
-	font-family:$tertiary-font-family;
-	a {
-		color:$tertiary-link-color;
-	}
+    background-color:$tertiary-bg-color;
+    color:$tertiary-font-color;
+    font-family:$tertiary-font-family;
+    a {
+        color:$tertiary-link-color;
+    }
 }
 //end color sets
 
@@ -216,45 +216,45 @@ $tertiary-font-family:Georgia, serif;
 
 //float-sets for styling that doesn't work well with grid: use mixin on container and floated pieces
 @mixin container-float-set($width:100%) {
-	overflow:hidden;
-	clear:both;
-	width:$width;
+    overflow:hidden;
+    clear:both;
+    width:$width;
 }
 
 @mixin floated($position:left, $width:20em, $pad:1em, $margin:1em) {
-	float:$position;
-	width:$width;
-	padding:$pad;
-	margin:$margin;
+    float:$position;
+    width:$width;
+    padding:$pad;
+    margin:$margin;
 }
 //end float-sets
 
 //UL classes
 
 .list-no-bullet {
-	list-style-type:none;
-	margin:0;
-	padding:0;
+    list-style-type:none;
+    margin:0;
+    padding:0;
 }
 //end UL classes
 
 .feature {
-	background-color:$primary-bg-color;
-	border:solid 2px #ccc;
-	border-radius:2px;
-	padding:1em;
+    background-color:$primary-bg-color;
+    border:solid 2px #ccc;
+    border-radius:2px;
+    padding:.5em;
 }
 
 .inline {
-	display:inline;
+    display:inline;
 }
 
 .block {
-	display:block;
+    display:block;
 }
 
 .default-padding {
-	padding:1em;
+    padding:1em;
 }
 //hide classes
 .hide {
@@ -262,9 +262,9 @@ $tertiary-font-family:Georgia, serif;
     position: absolute;
 }
 .hide-span {
-	span {
-		@extend .hide;
-	}
+    span {
+        @extend .hide;
+    }
 }
 //end hide classes
 
@@ -274,47 +274,63 @@ $tertiary-font-family:Georgia, serif;
 ////////////
 // LAYOUT //
 ////////////
+.group-container {
+    @extend .group
+}
 
 body {
-	@extend .primary-color-set;
+    @extend .primary-color-set;
+    border:solid 1px red;
 }
-header#banner {
-	margin-bottom:1em;
-	@extend .default-padding;
-	@extend .secondary-color-set;
-}
-nav {
-	div.formatting {
-		@extend .tertiary-color-set;
-		padding:.5em;
-	}
-}
-div#main-container {
-		width: 80%;
-		margin: 0 auto;
-		padding:.5em;
-}
-aside {
-	div.formatting {
-		@extend .feature;
-		margin:1em 0 0 1em;
-	}
-}
-footer {
-	text-align:center;
-	@extend .secondary-color-set;
+div#wrapper {
+    width:80%;
+    margin: 0 auto;
 }
 
-section#first-section {
-	article {
-		@extend .col;
-		@extend .span_6_of_12;
-		div.formatting {
-			@extend .feature;
-			margin: 1em;
-		}
-	}
+header#banner {
+    margin-bottom:1em;
+    @extend .default-padding;
+    @extend .secondary-color-set;
+    border:solid 1px red;
 }
+nav {
+    @extend .tertiary-color-set;
+    border:solid 1px red;
+    ul {
+        @include nav-inline-item-separator('|');
+    }
+}
+section#main-container {
+    @extend .col;
+    @extend .span_8_of_12;
+    margin-left:0;
+}
+    section#main-container > .styling {
+        padding:1em 1em 1em 0;
+        border:solid 1px orange;
+    }
+article {
+    @extend .col;
+    @extend .span_6_of_12;
+    .styling {
+        @extend .feature;
+    }
+    &:first-child {
+        margin-left:0;
+    }
+}
+
+aside {
+    @extend .col;
+    @extend .span_4_of_12;
+}
+footer {
+    text-align:center;
+    @extend .secondary-color-set;
+    border:solid 1px red;
+}
+
+
 
 
 
