@@ -20,7 +20,7 @@
   /* For IE 6/7 (trigger hasLayout) */ }
 
 /*  GRID COLUMN SETUP   ==================================================================== */
-.col, section#main-container, article, aside {
+.col, section#main-container, article, article .thumbnails p, aside {
   display: block;
   float: left;
   margin: 1% 0 1% 1.6%; }
@@ -28,7 +28,7 @@
 /* do this inline below jcm .col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
 /*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
 @media only screen and (max-width: 480px) {
-  .col, section#main-container, article, aside {
+  .col, section#main-container, article, article .thumbnails p, aside {
     margin: 1% 0 1% 0%; } }
 /*  GRID OF TWELVE   ============================================================================= */
 .span_12_of_12 {
@@ -61,14 +61,14 @@
 .span_3_of_12 {
   width: 23.78%; }
 
-.span_2_of_12 {
+.span_2_of_12, article .thumbnails p {
   width: 15.32%; }
 
 .span_1_of_12 {
   width: 6.86%; }
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1000px) {
   .span_12_of_12 {
     width: 100%; }
 
@@ -99,7 +99,7 @@
   .span_3_of_12 {
     width: 100%; }
 
-  .span_2_of_12 {
+  .span_2_of_12, article .thumbnails p {
     width: 100%; }
 
   .span_1_of_12 {
@@ -181,6 +181,8 @@ section#main-container > .styling {
 
 article:first-child {
   margin-left: 0; }
+article .thumbnails p {
+  border: solid 1px pink; }
 
 footer {
   text-align: center;

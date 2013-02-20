@@ -117,7 +117,7 @@ $tertiary-font-family:Georgia, serif;
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1000px) {
     .span_12_of_12 {
         width: 100%; 
     }
@@ -317,6 +317,11 @@ article {
     }
     &:first-child {
         margin-left:0;
+    }
+    .thumbnails p {
+        @extend .col;
+        @extend .span_2_of_12;
+        border: solid 1px pink;
     }
 }
 
